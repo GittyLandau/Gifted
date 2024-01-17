@@ -76,7 +76,7 @@ app.post('/send-email', async (req, res) => {
     res.status(500).send('Error sending email');
   }
 });
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 app.listen(process.env.PORT, () =>
   console.log(`Server running on port ${PORT}`)
 );
