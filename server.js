@@ -56,15 +56,13 @@ app.delete('/cart/:id', (req, res) => {
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.post('/send-email', async (req, res) => {
-  const { to, subject, text } = req.body;
-
+  const { subject, text } = req.body;
   const msg = {
     to: 'gittylandau04@gmail.com', // Change to your recipient
     from: 'gittylandau04@gmail.com', // Change to your verified sender
     subject: subject,
     text: text,
   };
-
   try {
     await sgMail.send(msg);
     res.status(200).send('Email sent successfully');
