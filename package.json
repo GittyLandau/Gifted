@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": "14.x"
+    "node": "20.9.0"
   },
   "dependencies": {
     "@sendgrid/mail": "^8.1.0",
